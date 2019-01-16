@@ -62,4 +62,16 @@ class LinkedList(object):
             else:
                 self.head = current.next
         
+    def insert_first(self, new_element):
+        new_element.next = self.head
+        self.head = new_element
+
+    def delete_first(self):
+        if self.head:
+            deleted_element = self.head
+            temp = deleted_element.next
+            self.head = temp
+            return deleted_element
+        else:
+            return None
         
